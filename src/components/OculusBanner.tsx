@@ -13,7 +13,6 @@ export const OculusBanner: React.FC = () => {
       <div className="max-w-shell mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl bg-[#0E004B] text-white p-8 sm:p-14 lg:p-20 overflow-hidden border border-indigo-900/30">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            {/* Text & CTAs */}
             <div className="lg:col-span-7 space-y-6 z-10">
               <span className="inline-block rounded-full bg-sky-400/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-300">
                 Special Feature
@@ -47,7 +46,6 @@ export const OculusBanner: React.FC = () => {
               </div>
             </div>
 
-            {/* VR Headset Image */}
             <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
               <div className="relative w-full max-w-md aspect-[4/3] flex items-center justify-center">
                 <img
@@ -61,7 +59,6 @@ export const OculusBanner: React.FC = () => {
         </div>
       </div>
 
-      {/* Video Modal */}
       {isVideoOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
           <div className="relative w-full max-w-3xl aspect-video rounded-2xl overflow-hidden bg-black">

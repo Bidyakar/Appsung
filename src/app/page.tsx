@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRightIcon } from 'lucide-react';
 import { Hero } from '../components/home/Hero';
+import { AboutSection } from '../components/home/AboutSection';
 import { Spotlight } from '../components/home/Spotlight';
 import { Reviews } from '../components/home/Reviews';
 import { ProductCard } from '../components/ProductCard';
@@ -74,6 +75,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <AboutSection />
       <Spotlight />
       <Reviews />
 

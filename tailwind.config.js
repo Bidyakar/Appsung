@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Montserrat', 'Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        tech: ['"Space Grotesk"', 'Inter', 'ui-sans-serif', 'sans-serif'],
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },

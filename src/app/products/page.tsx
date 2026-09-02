@@ -63,7 +63,6 @@ export default function ProductsPage() {
     <div className="bg-white">
       <div className="mx-auto max-w-shell px-5 py-12 sm:px-8 lg:py-16">
         
-        {/* PAGE HEADER */}
         <header className="max-w-2xl">
           <h1 className="font-display text-[36px] font-bold leading-tight tracking-tight text-gray-900 sm:text-[44px]">
             All products
@@ -73,7 +72,6 @@ export default function ProductsPage() {
           </p>
         </header>
 
-        {/* TRUST & GUARANTEES BAR */}
         <div className="mt-8 rounded-2xl border border-gray-200 bg-[#0E004B] p-6 text-white sm:p-7">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center justify-between">
             {trustItems.map(({ icon: Icon, title, desc }) => (
@@ -92,7 +90,6 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        {/* CATEGORY FILTER & SORTING */}
         <div className="mt-10 flex flex-col gap-5 border-y border-gray-200 py-4 lg:flex-row lg:items-center lg:justify-between">
           <div
             role="group"
@@ -141,7 +138,6 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        {/* RESULTS COUNT */}
         <div className="mt-8 flex items-center justify-between text-[14px] text-gray-500">
           <p>
             Showing <span className="font-semibold text-gray-900">{visible.length}</span>{' '}
@@ -149,7 +145,6 @@ export default function ProductsPage() {
           </p>
         </div>
 
-        {/* PRODUCT GRID */}
         {visible.length === 0 ? (
           <div className="py-20 text-center">
             <p className="font-display text-[18px] font-semibold text-gray-900">

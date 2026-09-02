@@ -33,7 +33,6 @@ export function AppsungLogo({
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      {/* Official Circular Logo Badge */}
       <img
         src="/logo.jpg"
         alt="APPSUNG Mobile Phones Trading LLC Logo"
@@ -51,7 +50,7 @@ export function AppsungLogo({
           </span>
           <span
             className={`font-semibold tracking-[0.14em] uppercase mt-1 leading-none ${
-              isDarkBg ? 'text-indigo-200' : 'text-[#0E004B]'
+              isDarkBg ? 'text-gray-300' : 'text-gray-700'
             } ${subtitleSizeMap[size]}`}
           >
             Mobile Phones Trading LLC

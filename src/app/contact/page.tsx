@@ -30,27 +30,22 @@ export default function ContactPage() {
 
   return (
     <div className="bg-white text-gray-900">
-      {/* HEADER HERO */}
-      <section className="border-b border-gray-200 bg-[#0E004B] text-white py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10">
-          <p className="text-[13px] font-bold uppercase tracking-wider text-indigo-300">
+      <div className="mx-auto max-w-7xl px-6 pt-12 pb-4 sm:px-10 sm:pt-16">
+        <header className="max-w-2xl">
+          <p className="text-[13px] font-bold uppercase tracking-wider text-[#0E004B]">
             Get in touch
           </p>
-          <h1 className="mt-3 font-display text-[38px] sm:text-[50px] font-bold tracking-tight text-white leading-tight">
+          <h1 className="mt-3 font-display text-[36px] sm:text-[44px] font-bold tracking-tight text-gray-900 leading-tight">
             Visit our Bur Dubai Flagship Store or contact us online.
           </h1>
-          <p className="mt-4 text-[16px] sm:text-[18px] text-indigo-100/85 max-w-2xl leading-relaxed">
+          <p className="mt-4 text-[16px] text-gray-600 leading-relaxed">
             Real specialists on-site 7 days a week. Test, inspect, and unbox genuine UAE stock in person, or get instant same-day dispatch across Dubai.
           </p>
-        </div>
-      </section>
+        </header>
+      </div>
 
-      {/* MAIN CONTENT GRID */}
-      <div className="mx-auto max-w-7xl px-6 sm:px-10 py-14 sm:py-20">
-        
-        {/* TOP CONTACT CARDS */}
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 py-10 sm:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {/* Phone */}
           <div className="rounded-2xl border border-gray-200 bg-gray-50/70 p-6 flex flex-col justify-between">
             <div>
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0E004B] text-white mb-4">
@@ -71,7 +66,6 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* WhatsApp */}
           <div className="rounded-2xl border border-gray-200 bg-gray-50/70 p-6 flex flex-col justify-between">
             <div>
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600 text-white mb-4">
@@ -94,7 +88,6 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* Email */}
           <div className="rounded-2xl border border-gray-200 bg-gray-50/70 p-6 flex flex-col justify-between">
             <div>
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0E004B] text-white mb-4">
@@ -115,7 +108,6 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* Hours */}
           <div className="rounded-2xl border border-gray-200 bg-gray-50/70 p-6 flex flex-col justify-between">
             <div>
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0E004B] text-white mb-4">
@@ -134,10 +126,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* MAP & INQUIRY FORM ROW */}
         <div className="grid lg:grid-cols-12 gap-10 items-start">
-          
-          {/* LEFT: MAP & PHYSICAL STORE ADDRESS */}
           <div className="lg:col-span-7 space-y-6">
             <div className="rounded-2xl border border-gray-200 p-6 bg-white">
               <div className="flex items-start gap-4">
@@ -157,7 +146,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Transit Tips */}
               <div className="mt-5 pt-5 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-2 gap-4 text-[13px] text-gray-600">
                 <div className="flex items-center gap-2">
                   <Navigation className="h-4 w-4 text-[#0E004B] shrink-0" />
@@ -170,7 +158,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* EMBEDDED GOOGLE MAP */}
             <div className="overflow-hidden rounded-2xl border border-gray-200 h-[380px] w-full bg-gray-100">
               <iframe
                 title="APPSUNG Store Location Map"
@@ -185,7 +172,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* RIGHT: DIRECT MESSAGE / INQUIRY FORM */}
           <div className="lg:col-span-5 rounded-2xl border border-gray-200 bg-gray-50/60 p-7 sm:p-8">
             <h2 className="font-display text-[22px] font-bold text-gray-900">
               Send an Inquiry
@@ -283,7 +269,6 @@ export default function ContactPage() {
               </form>
             )}
 
-            {/* Social link */}
             <div className="mt-6 pt-5 border-t border-gray-200 text-center text-[13px] text-gray-600">
               <span>Follow our daily store unboxings on </span>
               <a
@@ -296,9 +281,7 @@ export default function ContactPage() {
               </a>
             </div>
           </div>
-
         </div>
-
       </div>
     </div>
   );

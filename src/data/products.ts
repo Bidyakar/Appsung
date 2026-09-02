@@ -674,10 +674,7 @@ export const products: Product[] = [
   },
 ];
 
-export const featuredProduct = products[0]; // iPhone 16 Pro Max
-
-export const lifestyleImage =
-  'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=85';
+export const featuredProduct = products[0];
 
 export const categories = [
   'All',
