@@ -120,13 +120,13 @@ export function Hero() {
   }, []);
 
   const handleAddToCart = () => {
-    addItem(featuredProduct, featuredProduct.colors[0]);
+    addItem(featuredProduct, featuredProduct.colors[0], 1, featuredProduct.storage?.[0]);
     setAddedEffect(true);
     setTimeout(() => setAddedEffect(false), 1500);
   };
 
   const handleBuyNow = () => {
-    addItem(featuredProduct, featuredProduct.colors[0]);
+    addItem(featuredProduct, featuredProduct.colors[0], 1, featuredProduct.storage?.[0]);
     router.push(`/products/${featuredProduct.id}`);
   };
 

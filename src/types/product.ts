@@ -23,5 +23,6 @@ export interface Product {
 export interface CartLine {
   product: Product;
   color: string;
+  storage?: string;
   quantity: number;
 }

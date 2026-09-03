@@ -16,9 +16,9 @@ interface CartContextValue {
   isOpen: boolean;
   openCart: () => void;
   closeCart: () => void;
-  addItem: (product: Product, color: string, quantity?: number) => void;
-  removeItem: (id: string, color: string) => void;
-  setQuantity: (id: string, color: string, quantity: number) => void;
+  addItem: (product: Product, color: string, quantity?: number, storage?: string) => void;
+  removeItem: (id: string, color: string, storage?: string) => void;
+  setQuantity: (id: string, color: string, quantity: number, storage?: string) => void;
 }
 
 const CartContext = createContext<CartContextValue | null>(null);
@@ -28,10 +28,13 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const addItem = useCallback(
-    (product: Product, color: string, quantity = 1) => {
+    (product: Product, color: string, quantity = 1, storage?: string) => {
       setLines((current) => {
         const existing = current.find(
-          (line) => line.product.id === product.id && line.color === color
+          (line) =>
+            line.product.id === product.id &&
+            line.color === color &&
+            line.storage === storage
         );
         if (existing) {
           return current.map((line) =>
@@ -40,26 +43,37 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
               : line
           );
         }
-        return [...current, { product, color, quantity }];
+        return [...current, { product, color, storage, quantity }];
       });
       setIsOpen(true);
     },
     []
   );
 
-  const removeItem = useCallback((id: string, color: string) => {
+  const removeItem = useCallback((id: string, color: string, storage?: string) => {
     setLines((current) =>
       current.filter(
-        (line) => !(line.product.id === id && line.color === color)
+        (line) =>
+          !(
+            line.product.id === id &&
+            line.color === color &&
+            line.storage === storage
+          )
       )
     );
   }, []);
 
   const setQuantity = useCallback(
-    (id: string, color: string, quantity: number) => {
+    (id: string, color: string, quantity: number, storage?: string) => {
       setLines((current) =>
         current.flatMap((line) => {
-          if (line.product.id !== id || line.color !== color) return [line];
+          if (
+            line.product.id !== id ||
+            line.color !== color ||
+            line.storage !== storage
+          ) {
+            return [line];
+          }
           if (quantity < 1) return [];
           return [{ ...line, quantity }];
         })
